@@ -1,0 +1,189 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noides</title>
+    <meta property="og:title" content="Noides - Adventures of a Dark Wizard">
+    <meta property="og:description" content="Noides is a story-driven puzzle platformer set in a dark, crumbling world. Guide three souls through traps and enemies as they seek escape and answers.">
+    <meta property="og:image" content="https://betatenshi.pages.dev//public/images/hero.png">
+    <meta property="og:url" content="https://betatenshi.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Noides">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Noides - Adventures of a Dark Wizard">
+    <meta name="twitter:description" content="Noides is a story-driven puzzle platformer set in a dark, crumbling world. Guide three souls through traps and enemies as they seek escape and answers.">
+    <meta name="theme-color" content="#8a2be2">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
+<style>
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .toggle .line2 {
+            opacity: 0;
+        }
+        
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .section-title, .feature-card, .gallery-item, .about-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .section-title.animate, .feature-card.animate, .gallery-item.animate, .about-content.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-lightbox:hover {
+            color: var(--main-color);
+        }
+    </style></head>
+<body>
+    <div class="container">
+        <header style="background-color: rgba(10, 10, 10, 0.95); box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;">
+            <nav>
+                <div class="logo">
+                    <h1>Noides</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Game</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="Setup-V31.zip" class="download-btn">Download</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h2>Fight with magics</h2>
+                    <p>Guide three souls through traps and enemies in a dark, crumbling world to find escape and answers!</p>
+                    <a href="Setup-V31.zip" class="cta-button" target="_blank">Download</a>
+                </div>
+                <div class="hero-image">
+                    <img src="wallpaper.png" alt="BlockyRush" id="hero-img" style="opacity: 1; transition: opacity 1s ease-in-out;">
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <h2 class="section-title animate">About Noides</h2>
+                <div class="about-content animate">
+                    <div class="about-wrapper">
+                        <div class="about-text">
+                            <p>Noides is an emotional and deeply atmospheric narrative-driven puzzle platformer. Uncover the story of an adventurous young girl, a stoic knight, and a man in search of answers.</p>
+                            <p>Explore a crumbling, nightmarish landscape, slice through enemies, and spring deadly traps in order to escape the evil that awaits...</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="gameplay.png" alt="Noides Gameplay" id="gameplay-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="features" class="features-section">
+                <h2 class="section-title animate">Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card animate">
+                        <div class="feature-icon color-change"></div>
+                        <h3>A hauntingly atomspheric pixel art world</h3>
+                        <p>Explore a broken nightmare world, defeat enemies, and avoid deadly traps to escape.</p>
+                    </div>
+                    <div class="feature-card animate">
+                        <div class="feature-icon spells"></div>
+                        <h3>Play as three main characters</h3>
+                        <p>A knight explores a castle, a child uncovers secrets, and a wanderer seeks answers.</p>
+                    </div>
+                    <div class="feature-card animate">
+                        <div class="feature-icon roguelike"></div>
+                        <h3>Roguelike Experience</h3>
+                        <p>Each level offers a different experience; no two levels are the same.</p>
+                    </div>
+                    <div class="feature-card animate">
+                        <div class="feature-icon pixel-art"></div>
+                        <h3>Escape an otherworldly labyrinth</h3>
+                        <p>Lure enemies into deadly traps, solve puzzles, and use your scythe, hookshot, and pickaxe to survive.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery" class="gallery-section">
+                <h2 class="section-title animate">Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item animate">
+                        <img src="screenshot1.png" alt="BlockyRush Screenshot 1" class="gallery-img">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="screenshot2.png" alt="BlockyRush Screenshot 2" class="gallery-img">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="screenshot3.png" alt="BlockyRush Screenshot 3" class="gallery-img">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Noides</h2>
+                    <p>© 2025 Noides Team. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;955e852d9aba7b12&quot;,&quot;version&quot;:&quot;2025.6.2&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;f30524300e724386ad52a6d471af72c3&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}}}" crossorigin="anonymous"></script>
+ </body></html>
